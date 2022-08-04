@@ -1,0 +1,28 @@
+#maincontainer {
+  height: 100%;
+  width: 100%;
+  border: 1px solid green;
+  display: flex;
+}
+
+#optionscontainer {
+
+}
+
+#gridcontainer {
+  height: 320px;
+  width: 320px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+#pixel {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+/*   background: #D3D3D3; */
+}
+
+/* #pixel:hover {
+  background: black;
+} */

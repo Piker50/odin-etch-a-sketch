@@ -1,27 +1,26 @@
+let gridcontainer = document.querySelector('#gridcontainer');
 
-// Create a center tag to center all the elements
-var center = document.createElement('center');
-
-// Create a table element
-var ColoringGrid = document.createElement('table');
-for (var i = 0; i < 16; i++) {
-
-    // Create a row
-    var tr = document.createElement('tr');
-    for (var j = 0; j < 16; j++) {
-
-    // Create a cell
-    var td = document.createElement('td');
-    td.setAttribute('style', 'background: orange; height: 20px; width: 20px; border: 1px solid grey;');
-    tr.appendChild(td);
+for (let x = 0; x<16; x++) {
+    let row = document.createElement('div');
+    for (let y = 0; y<16; y++) {
+        let pixel = document.createElement('div');
+        pixel.setAttribute('id', 'pixel');
+        row.appendChild(pixel);
     }
-
-    // Append the row
-    ColoringGrid.appendChild(tr);
+    gridcontainer.appendChild(row);
 }
-center.appendChild(ColoringGrid);
 
-// Modifying table attribute properties
-ColoringGrid.setAttribute('cellspacing', '0');
-ColoringGrid.setAttribute('style', 'width: auto; border: 1px solid black');
-document.body.appendChild(center);
+let draw = document.querySelector('#pixel');
+
+document.addEventListener('mouseover', mouseOver);
+
+function mouseOver() {
+  document.getElementById("pixel").style.color = "red";
+}
+
+
+// document.getElementById("pixel").mouseover = function() {mouseOver()};
+
+// function mouseOver() {
+//   document.getElementById("pixel").style.color = "red";
+// }
