@@ -14,9 +14,9 @@ let draw = document.querySelector('#pixel');
 
 document.addEventListener('mouseover', mouseOver);
 
-function mouseOver() {
-  document.getElementById("pixel").style.color = "red";
-}
+// function mouseOver() {
+//   document.getElementById("pixel").style.color = "red";
+// }
 
 
 // document.getElementById("pixel").mouseover = function() {mouseOver()};
