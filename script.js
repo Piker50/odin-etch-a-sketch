@@ -1,4 +1,6 @@
-let gridcontainer = document.querySelector('#gridcontainer');
+let gridContainer = document.querySelector('#gridContainer');
+
+
 
 for (let x = 0; x<16; x++) {
     let row = document.createElement('div');
@@ -6,13 +8,18 @@ for (let x = 0; x<16; x++) {
         let pixel = document.createElement('div');
         pixel.setAttribute('id', 'pixel');
         row.appendChild(pixel);
+        pixel.addEventListener('mouseover', function(event){
+        event.target.style.backgroundColor = 'black';
+    })
     }
-    gridcontainer.appendChild(row);
+    gridContainer.appendChild(row);
 }
 
-let draw = document.querySelector('#pixel');
 
-document.addEventListener('mouseover', mouseOver);
+// const sizeSlider = 
+// let draw = document.querySelector('#pixel');
+
+// document.addEventListener('mouseover', mouseOver);
 
 // function mouseOver() {
 //   document.getElementById("pixel").style.color = "red";
